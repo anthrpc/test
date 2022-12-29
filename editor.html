@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/mode-python.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+    <title>CodeCache</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
+    <title>CodeCache</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">CodeCache</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Editor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<!-- HTML for the settings modal -->
+<div class="modal" tabindex="-1" id="settingsModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Settings</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Font size</h6>
+                <div class="form-group">
+                    <select class="form-control" id="fontSizeSelect">
+                        <option value="10px">10px</option>
+                        <option value="12px">12px</option>
+                        <option value="14px">14px</option>
+                        <option value="16px">16px</option>
+                        <option value="18px">18px</option>
+                    </select>
+                    <h6>Theme</h6>
+                    <div class="form-group">
+                    <select id="theme-select" class="form-control">
+                        <option value="ace/theme/chrome">Chrome</option>
+                        <option value="ace/theme/monokai">Monokai</option>
+                        <option value="ace/theme/tomorrow">Tomorrow</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                    <h6>Language</h6>
+                        <select id="language-select" class="form-control">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>`
+                    </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveSettingsBtn">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container">
+        <h1 class="title text-center">CodeCache Editor</h1>
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <h3 class="text-center">Code</h3>
+                <div id="code"></div>
+                <button class="btn btn-outline-success mb-3" id="btn">Execute</button>
+                <button id="download-btn" class="btn btn-outline-success mb-3">Download Code</button>
+                <!-- Add an "Open File" button to the page -->
+                <button id="open-file-button" class="btn btn-outline-success mb-3">Open File</button>
+                <button type="button" class="btn btn-outline-success mb" data-toggle="modal" data-target="#settingsModal">Open Settings</button>
+                <!-- Create a file input element that will be used to select a file -->
+                <input type="file" id="file-input" style="display: none">
+            </div>
+            <div class="col-lg-6 col-12 output">
+                <h3 class="text-center">Output</h3>
+                <div id="output"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

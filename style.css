@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#code {
+    min-height: 600px;
+    border: 1px solid black;
+}
+
+#output {
+    min-height: 600px;
+    background: #fff;
+    padding: 3px;
+    border: 1px solid black;
+}
+
+.ace_editor {
+    font-size: 10px;
+}
+
+body{
+    background-color: #ced4da;
+}

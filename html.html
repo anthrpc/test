@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTML Basics</title>
+  <!-- Import Materialize CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/themes/prism.min.css"
+    integrity="sha384-9BhjK8G1DYO1ZwO2++Jxl57KjvOmslNh5L9zHN1F8c2zjK5c5M/Hrm79tsO/p0j3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/prism.min.js"
+    integrity="sha384-Q5C5z5g5fE8hWq3nD/ycUzfXgN/bGq3dP6Z/0D/Oa6ZR/6wnvUOzT1nm7X2TmIWl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/codemirror.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="primary-color navbar-fixed">
+    <nav>
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo">Learn to Code</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#lessons">Lessons</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <div class="container">
+      <!-- Page title -->
+      <h1 class="primary-text-color">HTML Basics</h1>
+
+      <!-- Introduction -->
+      <p>HTML (Hypertext Markup Language) is a language used for structuring and formatting the content of a
+        webpage. It allows you to create and organize text, images, and other elements on a webpage using a set
+        of tags and attributes.</p>
+
+      <!-- Section: What are tags and attributes? -->
+      <h2 class="primary-text-color">What are tags and attributes?</h2>
+      <p>HTML tags are used to mark the beginning and end of an element on a webpage. They are enclosed in angle
+        brackets, like this: <code>&lt;tagname&gt;</code>. Attributes provide additional information about an
+        element and are used to customize the way it is displayed. They are added to the opening tag, like this:
+        <code>&lt;tagname attribute="value"&gt;</code>.
+      </p>
+      <p>HTML elements are the building blocks of an HTML document. They are used to define the content and structure of a
+        webpage.</p>
+
+      <!-- Example: Creating a paragraph -->
+      <h3 class="primary-text-color">Example: Creating a paragraph</h3>
+      <p>To create a paragraph in HTML, you can use the <code>&lt;p&gt;</code> tag. For example:</p>
+      <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+      <p>This will produce the following output:</p>
+      <p>This is a paragraph.</p>
+
+      <!-- Exercise -->
+      <h2 class="primary-text-color">Exercise</h2>
+      <p>Try creating your own paragraph using the our online code editor!</p>
+      <a href="editor.html" class="btn btn-large">Take me there!</a>
+<h2>HTML text formatting</h2>
+<p>
+  To format text in HTML, you can use various tags such as
+  <pre>
+  - To make your text bold,
+  <code>
+    <b>&lt;b&gt;use this tag.&lt;/b&gt;</b>
+  </code>
+  - To make lists,
+  <code>
+    <li>&lt;li&gt;use this tag.&lt;/li&gt;</li>
+  </code>
+  - To underline your text,
+  <code>
+    <u>&lt;u&gt;use this tag.&lt;/u&gt;</u>
+  </code>
+  - To use superscript,
+  <code>
+    <sup>&lt;sup&gt;use this tag.&lt;/sup&gt;</s>
+  </code>
+
+  To make text italic, you can use the
+  <code>
+    <i>&lt;i&gt; for italic: use this tag.&lt;/i&gt;</i>
+    <em>&lt;em&gt; for italic too, you can also use this tag..&lt;/em&gt;</em>
+  </code>
+  To create subscript text, you can use the
+    <code>
+      <sub>&lt;sub&gt; for subscript, use this: this is a subscript text!&lt;/sub&gt;</sub>
+    </code>
+    </pre>
+</p>
+<hr>
+<h2>Notice:</h2>
+<p>It's important to note that these tags should be used sparingly and only for the purpose of formatting text. 
+For example, don't use the bold <code> &lt;b&gt;&lt;/b&gt;</code> tag just to make text larger or more prominent – 
+use the h1 - h6 tags for headings or the <code>&lt;p&gt; &lt;/p&gt;</code> tag with CSS styling for styling regular text.</p>
+<hr>
+
+<h1>HTML Lists</h1>
+<p>1. Unordered lists:
+To create an unordered list, you can use the ul element. Each list item should be wrapped in li tags.</p>
+
+<h2>Code Snippet: Creating a Simple List</h2>
+<p>To create a simple list in HTML, you can use the `ul` element to create an unordered list and the `li` element to add
+  list items. Here is an example:</p>
+<pre><code class="language-html">
+  &lt;ul&gt;
+  &nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;
+  &nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;
+  &nbsp;&nbsp;&lt;li&gt;Item 3&lt;/li&gt;
+  &lt;/ul&gt;
+</code></pre>
+
+<p>This would create a list with three items:</p>
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+</section>
+<section>
+  <h2>HTML Headings</h2>
+  <p>HTML has six levels of headings, which are used to indicate the importance of a section of content. The highest
+    level heading is <code>&lt;h1&gt;</code> and the lowest level heading is <code>&lt;h6&gt;</code>.</p>
+  <p>Here is an example of how to use headings in HTML:</p>
+  <pre>
+      &lt;h1&gt;Heading Level 1&lt;/h1&gt;
+      &lt;h2&gt;Heading Level 2&lt;/h2&gt;
+      &lt;h3&gt;Heading Level 3&lt;/h3&gt;
+      &lt;h4&gt;Heading Level 4&lt;/h4&gt;
+      &lt;h5&gt;Heading Level 5&lt;/h5&gt;
+      &lt;h6&gt;Heading Level 6&lt;/h6&gt;
+    </pre>
+</div>
+<!-- Table Example -->
+<h2>HTML Tables</h2>
+<p>HTML tables are used to display data in a tabular format, with rows and columns. They are defined using the table
+element, and each row is defined using the tr element. Cells within a row can be defined using the td element (standard
+cell) or the th element (table header cell).</p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Location</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>25</td>
+    <td>New York</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>30</td>
+    <td>Chicago</td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alice</td>
+    <td>27</td>
+    <td>USA</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>32</td>
+    <td>Canada</td>
+  </tr>
+</table>
+<h4>You can also use various attributes, such as colspan and rowspan, to control the layout and appearance of your table.</h4>
+<table>
+  <tr>
+    <th>Name</th>
+    <th colspan="2">Contact Information</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Alice</td>
+    <td>Email: alice@example.com</td>
+  </tr>
+  <tr>
+    <td>Phone: 555-555-1212</td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>Email: bob@example.com</td>
+    <td>Phone: 555-555-1212</td>
+  </tr>
+</table>
+
+<section>
+<!-- Form Example -->
+<h2>Forms</h2>
+<form action="/submit-form">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br>
+  <label for="age">Age:</label><br>
+  <input type="number" id="age" name="age"><br>
+  </select><br><br>
+  <button type="button" onclick="submitForm()" class="btn btn-large">Submit</button>
+</form>
+</section>
+
+<script>
+  function submitForm() {
+    alert("Form submitted!");
+  }
+</script>
+
+</main>
+</body>
+</html>
